@@ -11,6 +11,6 @@ public class HomeController {
     @RequestMapping("/")
     @ResponseBody
     public String index(){
-        return "<h1>Bem vindo !!</h1>";
+        return "<h1>Bem vindo !!! !!</h1>";
     }
 }
