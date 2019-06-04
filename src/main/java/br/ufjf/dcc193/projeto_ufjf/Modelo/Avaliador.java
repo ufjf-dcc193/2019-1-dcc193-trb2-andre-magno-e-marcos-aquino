@@ -1,3 +1,5 @@
+package br.ufjf.dcc193.projeto_ufjf.Modelo;
+
 import java.util.List;
 
 public class Avaliador {
