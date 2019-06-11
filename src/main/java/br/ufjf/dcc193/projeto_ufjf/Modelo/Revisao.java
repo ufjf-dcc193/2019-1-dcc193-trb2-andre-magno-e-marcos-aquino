@@ -3,7 +3,7 @@ package br.ufjf.dcc193.projeto_ufjf.Modelo;
 public class Revisao{
 
 
-    private int id;
+    private Integer id;
 
     private Avaliador avaliador;
 

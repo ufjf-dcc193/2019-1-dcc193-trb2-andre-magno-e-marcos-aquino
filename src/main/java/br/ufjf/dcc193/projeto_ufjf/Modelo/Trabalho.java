@@ -5,7 +5,7 @@ import java.util.List;
 public class Trabalho {
 
 
-    private int id;
+    private Integer id;
 
     private String titulo;
 

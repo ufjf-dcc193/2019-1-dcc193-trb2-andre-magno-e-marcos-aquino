@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Avaliador {
 
-    private int id;
+    private Integer id;
 
     private int codigoAcesso;
     
