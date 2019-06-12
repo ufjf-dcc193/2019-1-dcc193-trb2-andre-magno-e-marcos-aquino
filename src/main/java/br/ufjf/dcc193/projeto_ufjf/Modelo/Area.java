@@ -1,8 +1,16 @@
 package br.ufjf.dcc193.projeto_ufjf.Modelo;
 
-public class Area{
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-    private Integer id;
+@Entity
+public class Area{
+    @Id
+
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
 
     private String descricao;
 
@@ -14,12 +22,22 @@ public class Area{
         this.descricao = descricao;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public String toString() {
+        return descricao;
     }
 
-    public void setId(int id) {
+    /**
+     * @param id the id to set
+     */
+    public void setId(Long id) {
         this.id = id;
+    }
+    /**
+     * @return the id
+     */
+    public Long getId() {
+        return id;
     }
 
     public String getDescricao() {

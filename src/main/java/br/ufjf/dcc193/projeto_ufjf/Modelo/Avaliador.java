@@ -2,16 +2,21 @@ package br.ufjf.dcc193.projeto_ufjf.Modelo;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Avaliador {
 
-    private Integer id;
+    @Id
 
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
     private int codigoAcesso;
-    
     private String nomeCompleto;
-
     private String email;
-
     private List<Area> area;
 
     public Avaliador(){
@@ -25,12 +30,21 @@ public class Avaliador {
         this.area = area;
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public String toString() {
+        return nomeCompleto;
     }
-
-    public void setId(int id) {
+    /**
+     * @param id the id to set
+     */
+    public void setId(Long id) {
         this.id = id;
+    }
+    /**
+     * @return the id
+     */
+    public Long getId() {
+        return id;
     }
 
     public int getCodigoAcesso() {

@@ -1,11 +1,16 @@
 package br.ufjf.dcc193.projeto_ufjf.Modelo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-
+@Entity
 public class Trabalho {
 
-
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
 
     private String titulo;
 
@@ -29,12 +34,23 @@ public class Trabalho {
 
     }
 
-    public int getId() {
+
+
+    /**
+     * @return the id
+     */
+    public Long getId() {
         return id;
     }
-
-    public void setId(int id) {
+    /**
+     * @param id the id to set
+     */
+    public void setId(Long id) {
         this.id = id;
+    }
+    @Override
+    public String toString() {
+        return "TRabalho to string";
     }
 
     public String getTitulo() {

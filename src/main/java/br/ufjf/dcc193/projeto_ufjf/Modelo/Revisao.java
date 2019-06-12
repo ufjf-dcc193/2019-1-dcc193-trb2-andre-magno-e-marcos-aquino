@@ -1,18 +1,20 @@
 package br.ufjf.dcc193.projeto_ufjf.Modelo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Revisao{
 
-
-    private Integer id;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
+    private Long id;
     private Avaliador avaliador;
-
     private Trabalho trabalho;
-
     private int nota;
-
     private String descricao;
-
     private int status;
 
     public Revisao(){
@@ -26,18 +28,29 @@ public class Revisao{
         this.descricao = descricao;
         this.status = status;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    
+    @Override
+    public String toString() {
+        return "Avaliadores to string";
 
     public Avaliador getAvaliador() {
         return avaliador;
     }
+
+    /**
+     * @return the id
+     */
+    public Long getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 
     public void setAvaliador(Avaliador avaliador) {
         this.avaliador = avaliador;
