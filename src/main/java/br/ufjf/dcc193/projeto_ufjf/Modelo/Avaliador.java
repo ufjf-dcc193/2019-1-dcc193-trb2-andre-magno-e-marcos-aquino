@@ -18,7 +18,7 @@ public class Avaliador {
 
     }
 
-    public Avaliador(int codigoAcesso, String nomeCompleto, String email){
+    public Avaliador(int codigoAcesso, String nomeCompleto, String email,List<Area> area){
         this.codigoAcesso = codigoAcesso;
         this.nomeCompleto = nomeCompleto;
         this.email = email;
@@ -57,14 +57,17 @@ public class Avaliador {
         this.email = email;
     }
 
+ 
+    public void setArea(List<Area> area) {
+        this.area = area;
+    }
+
+   
     public List<Area> getArea() {
         return area;
     }
 
-    public void setArea(List<Area> areaConhecimento) {
-        this.area = area;
-    }
-
+    
     
 
     
