@@ -8,7 +8,6 @@ import javax.persistence.Id;
 @Entity
 public class Area{
     @Id
-
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 

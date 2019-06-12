@@ -11,7 +11,6 @@ import javax.persistence.Id;
 public class Avaliador {
 
     @Id
-
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     private int codigoAcesso;
