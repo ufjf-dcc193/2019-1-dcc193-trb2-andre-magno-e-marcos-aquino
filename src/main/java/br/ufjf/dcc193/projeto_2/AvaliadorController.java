@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class HomeController {
+public class AvaliadorController {
     
     @Autowired
     RepositorioAvaliador avaliadorRep;
@@ -23,16 +23,14 @@ public class HomeController {
     @RequestMapping(value="/avaliador/form.html", method=RequestMethod.POST)
    public ModelAndView criar(Avaliador avaliador) {
        ModelAndView mv = new ModelAndView();
-       //mv.setViewName("redirect:listar.html");
-       System.out.println(avaliador.getTitulo()+"ssssssssssssssssssssss>>>");
+       mv.setViewName("redirect:listar.html");
        avaliadorRep.save(avaliador);
        mv.addObject("avaliador", avaliador);
-       System.out.println(avaliador.getTitulo()+"ssssssssssssssssssssss>>22"+avaliadorRep.findAll().get(0));
        return mv;
    }
 
    @RequestMapping(value="/avaliador/form.html", method=RequestMethod.GET)
-   public ModelAndView ccriar() {
+   public ModelAndView criar() {
        ModelAndView mv = new ModelAndView();
        mv.setViewName("avaliador-form");
        mv.addObject("avaliador", new Avaliador("Teste"));
