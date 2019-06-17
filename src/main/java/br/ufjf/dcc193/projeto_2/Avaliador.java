@@ -1,9 +1,10 @@
-package br.ufjf.dcc.projeto_teste;
+package br.ufjf.dcc193.projeto_2;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 
 /**
  * Avaliador
@@ -12,18 +13,19 @@ import javax.persistence.Id;
 public class Avaliador {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String titulo;
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Titulo: " +titulo;
     }
 
     public Avaliador(String titulo){
         this.titulo=titulo;
-
+    }
+    public Avaliador(){
     }
 
     /**

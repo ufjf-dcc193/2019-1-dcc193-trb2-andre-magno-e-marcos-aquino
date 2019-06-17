@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+   <meta charset="UTF-8">
+   <title>Avaliador: Novo</title>
+</head>
+<body>
+   <html>Avaliador: Novo</html>
+   <form th:action="@{form.html}" th:object="${avaliador}" method="POST">
+       <label>Título: <input type="text" th:field="*{titulo}"/></label>
+       <input type="submit"/>
+       <input type="reset"/>
+   </form>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package br.ufjf.dcc.projeto_teste;
+package br.ufjf.dcc193.projeto_2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
