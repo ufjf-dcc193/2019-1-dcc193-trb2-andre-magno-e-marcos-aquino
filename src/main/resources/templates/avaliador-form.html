@@ -2,12 +2,14 @@
 <html lang="pt" xmlns:th="http://www.thymeleaf.org">
 <head>
    <meta charset="UTF-8">
-   <title>Avaliador: Novo</title>
+   <title>Novo Avaliador</title>
 </head>
 <body>
-   <html>Avaliador: Novo</html>
+   <html>Novo Avaliador</html>
    <form th:action="@{form.html}" th:object="${avaliador}" method="POST">
-       <label>Título: <input type="text" th:field="*{titulo}"/></label>
+       <label>Nome: <input type="text" th:field="*{nome}"/></label>
+       <label>Email: <input type="text" th:field="*{email}"/></label>
+       <label>Codigo: <input type="text" th:field="*{codigo}"/></label>
        <input type="submit"/>
        <input type="reset"/>
    </form>

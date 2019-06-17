@@ -33,7 +33,7 @@ public class AvaliadorController {
    public ModelAndView criar() {
        ModelAndView mv = new ModelAndView();
        mv.setViewName("avaliador-form");
-       mv.addObject("avaliador", new Avaliador("Teste"));
+       mv.addObject("avaliador", new Avaliador("André","andremagno@gmail.com","201376060"));
        return mv;
    }
 
@@ -45,8 +45,5 @@ public class AvaliadorController {
        mv.addObject("avaliadores", aval);
        return mv;
    }
-
-
-
-
+   
 }
