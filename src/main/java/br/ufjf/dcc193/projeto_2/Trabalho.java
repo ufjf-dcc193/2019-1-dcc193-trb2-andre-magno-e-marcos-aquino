@@ -12,7 +12,7 @@ import javax.persistence.Id;
 public class Trabalho {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
     private String titulo;
     private String descricao;
