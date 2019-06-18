@@ -19,7 +19,9 @@ public class Revisao{
 
     @NotNull(message="Campo obrigatório!")
     private String status;
+    @NotNull(message="Campo obrigatório!")
     private String descricao;
+    @NotNull(message="Campo obrigatório!")
     private int nota;
 
     @OneToOne(fetch = FetchType.EAGER)
